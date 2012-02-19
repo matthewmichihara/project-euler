@@ -10,7 +10,7 @@ def is_prime(n):
     return True
 
 def primes_up_to(n):
-    primes = set()
+    primes = []
     flag = False
     for i in range(2,n):
         for p in sorted(primes):
@@ -18,6 +18,6 @@ def primes_up_to(n):
                 if i % p == 0:
                     flag = True
                     break
-        if not flag: primes.add(i)
+        if not flag: primes.append(i)
         flag = False
     return primes
